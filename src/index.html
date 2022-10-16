@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+   
+</head>
+<body>
+    <div id="bg"></div>
+    <header> 
+        <a href="#">zoomzoom</a>
+        <!-- <div class="switch">
+            <div class="toggle" name="theme"></div>
+        </div> -->
+        
+
+    </header>
+    
+    <main>
+        <section id="card">
+                <ul>
+                    <li>
+                        <span></span>
+                            <strong>how may i help you</strong>
+                        
+        
+                    </li>
+                    <li>
+                        <span></span>
+                        <strong>how may i help you</strong>
+                        
+                    </li>
+                    <li>
+                        <span></span>
+                            <strong>how may i help you?</strong>
+                        
+                    </li>
+
+                </ul>
+        </section>
+        <section id="primary">
+            <h1>your primary assistant</h1>
+            <p>get help with your daily life help</p>
+            
+
+            <a href="#" id="modalBtn" class="action">
+               <strong>GET HELP ALREADY.</strong> 
+            </a>
+           
+    
+        </section>
+        <div id="simple-modal" class="modal">
+            <div id="content">
+                <div class="overlay"></div>
+                <ul class="hamburg" id="closeBtn">
+                    <li id="line1"></li>
+                    <li id="line2"></li>
+                    <li id="line3"></li>
+                </ul>
+                <p>Hello World</p>
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        // const onAndOff = () =>{
+        //     const tog = document.querySelector(".toggle[name=theme]");
+        //     const swt = document.querySelector(".switch")
+
+        //     tog.addEventListener("click",()=>{
+        //         tog.classList.toggle("toggleOn");
+        //         swt.classList.toggle("switchOn");
+               
+
+        //         if(tog.classList.contains('toggleOn')){
+        //             //console.log('hey')
+        //             trans()
+        //             document.documentElement.setAttribute('data-theme' ,'dark' )
+        //         } else{
+        //             //console.log('nah');
+        //             trans()
+        //             document.documentElement.setAttribute('data-theme' ,'light' )
+        //         }
+        //     });
+             
+        //     let trans = () =>{
+        //         document.documentElement.classList.add('transition');
+        //         window.setTimeout(()=>{
+        //             document.documentElement.classList.remove('transition');   
+        //         },1000);
+        //     }
+
+        // }
+        // onAndOff();
+
+        function modal(){
+            const modal = document.getElementById('simple-modal');
+            const modalBtn = document.getElementById('modalBtn')
+            const closeBtn = document.getElementById('closeBtn')
+
+            modalBtn.addEventListener('click',openModal);
+            closeBtn.addEventListener('click', closeModal)
+            window.addEventListener('click',windowClick)
+
+            function openModal(){
+               modal.style.display='block';
+            }
+            function closeModal(){
+                modal.style.display='none';
+
+            }
+            function windowClick(e){
+                if(e.target === modal){
+                    modal.style.display='none';
+
+                }
+            }
+
+        }
+        modal()
+
+       
+    </script>
+</body>
+</html>
